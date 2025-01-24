@@ -1,0 +1,34 @@
+@endpoint = http://localhost:3000/api/v1/tasks
+
+
+###adding task
+POST {{endpoint}}/add
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InByYXNocmlqYW4iLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImlhdCI6MTczNzY3NTYwNywiZXhwIjoxNzM3NzYyMDA3fQ.Elj2EfZf0B7-nd_yIsLkegUb4ZPir4H23jU1dX8zRBg
+
+{
+    "task" : "make bed",
+    "status" : "pending"
+}
+
+###
+
+###get taks
+GET {{endpoint}}
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InByYXNocmlqYW4iLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImlhdCI6MTczNzY3NTYwNywiZXhwIjoxNzM3NzYyMDA3fQ.Elj2EfZf0B7-nd_yIsLkegUb4ZPir4H23jU1dX8zRBg
+
+
+###
+###changing status
+POST {{endpoint}}/status/6792d0d0ff1c64cb0af53880
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InByYXNocmlqYW4iLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImlhdCI6MTczNzY3NTYwNywiZXhwIjoxNzM3NzYyMDA3fQ.Elj2EfZf0B7-nd_yIsLkegUb4ZPir4H23jU1dX8zRBg
+
+{
+    "status" : "completed"
+}
+
+###
+###delete task
+DELETE {{endpoint}}/delete/6792d0d0ff1c64cb0af53880
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InByYXNocmlqYW4iLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImlhdCI6MTczNzY3NTYwNywiZXhwIjoxNzM3NzYyMDA3fQ.Elj2EfZf0B7-nd_yIsLkegUb4ZPir4H23jU1dX8zRBg
