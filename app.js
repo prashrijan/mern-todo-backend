@@ -8,12 +8,7 @@ import taskRouter from "./src/routes/taskRoute.js";
 const app = express();
 
 app.use(express.json());
-app.use(
-  cors({
-    origin: `${process.env.ENDPOINT}`,
-    optionsSuccessStatus: 200,
-  })
-);
+app.use(cors());
 
 // Database Connection
 try {
